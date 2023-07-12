@@ -11,7 +11,7 @@ resource "aws_instance" "Apache" {
     availability_zone = "us-east-2"
     ami = "ami-024e6efaf93d85776"
     instance_type = "t2.micro"
-    key_name = "sv"
+    key_name = "home"
     vpc_security_group_ids = [aws_security_group.DEfatt.id]
 
     //Create main disk
