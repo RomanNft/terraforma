@@ -9,7 +9,7 @@ provider "aws" {
 //  Create ec2 instance
 resource "aws_instance" "Apache" {
     availability_zone = "us-east-2"
-    ami = "ami-024e6efaf93d85776"
+    ami = "ami-085f9c64a9b75eed5"
     instance_type = "t2.micro"
     key_name = "home"
     vpc_security_group_ids = [aws_security_group.DEfatt.id]
@@ -17,8 +17,8 @@ resource "aws_instance" "Apache" {
     //Create main disk
     ebs_block_device {
         device_name = "/dev/sda1"
-        volume_size = 10
-        volume_type = "gp2"
+        volume_size = 8
+        volume_type = "gp3"
         tags = {
             Neme = "root-disk"
         }
